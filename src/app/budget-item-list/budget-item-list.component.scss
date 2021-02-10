@@ -1,0 +1,42 @@
+@import "../../budget-styles.scss";
+
+.budget-item-main {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  font-family: $family-sans-serif;
+
+  .budget-item-inner {
+    display: flex;
+    max-width: 700px;
+    height: 100%;
+    width: 100%;
+
+    .income-section {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 0;
+      flex-grow: 1;
+
+      h3 {
+        font-size: 28px;
+        color: $green;
+        margin-bottom: 15px;
+      }
+    }
+
+    .expenses-section {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 0;
+      flex-grow: 1;
+      margin-left: 30px;
+      h3 {
+        font-size: 28px;
+        color: $red;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../../budget-styles.scss";
+
+.main-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  .delete {
+    position: absolute;
+    height: 26px;
+    width: 32px;
+    right: -15px;
+    top: -15px;
+    background-color: #161c29;
+    border-radius: 50%;
+    color: #dc3900;
+    align-items: center;
+    text-align: center;
+    padding-top: 7px;
+    transform: scale(0);
+  }
+
+  &:hover {
+    .delete {
+      opacity: 1;
+      transform: scale(1);
+      cursor: pointer;
+    }
+  }
+}
+
+.budget-item {
+  display: flex;
+  width: 100%;
+  background-color: $light-grey;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($light-grey, 2%);
+  }
+  .amount {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .description {
+    display: flex;
+    flex-grow: 1;
+    font-size: 18px;
+    margin-left: 15px;
+    align-items: center;
+  }
+}
+
+.expense {
+  margin-bottom: 20px;
+  p {
+    color: $red;
+  }
+
+  .amount {
+    background-color: $light-red;
+  }
+}
+.income {
+  margin-bottom: 20px;
+  p {
+    color: $green;
+  }
+
+  .amount {
+    background-color: $light-green;
+  }
+}
